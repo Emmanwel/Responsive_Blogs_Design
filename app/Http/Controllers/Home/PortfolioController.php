@@ -14,7 +14,9 @@ class PortfolioController extends Controller
     public function AllPortfolio()
     {
         $portfolio = Portfolio::latest()->get();
-        return view('admin.portfolio_page.portfolio_all', compact('portfolio'));
+        $portfolioData = Portfolio::count();
+        //$opened_counts = Portfolio::where('state', 'Closed')->count();
+        return view('admin.portfolio_page.portfolio_all', compact('portfolio', 'portfolioData'));
     } //End Method
 
     public function AddPortfolio()

@@ -14,7 +14,8 @@ class BlogCategoryController extends Controller
     {
 
         $blogcategory = BlogCategory::latest()->get();
-        return view('admin.blog_category.blog_category_all', compact('blogcategory'));
+        $blogCategoryData = BlogCategory::count();
+        return view('admin.blog_category.blog_category_all', compact('blogcategory', 'blogCategoryData'));
     } // End Method
 
     public function AddBlogCategory()

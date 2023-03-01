@@ -46,7 +46,7 @@ Category | Blog Categorization.
                         @foreach ($blogpost as $item)
                             <div class="standard__blog__post">
                                 <div class="standard__blog__thumb">
-                                    <a href="blog-details.html"><img src="{{ asset($item->blog_image) }}"
+                                    <a href=""><img src="{{ asset($item->blog_image) }}"
                                             alt=""></a>
                                     <a href="blog-details.html" class="blog__link"><i
                                             class="far fa-long-arrow-right"></i></a>
